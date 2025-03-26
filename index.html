@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فوازير - إدارة الحلقات</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>فوازير أبو عمر</h1>
+  <button id="createEpisodeBtn">إنشاء حلقة جديدة</button>
+</div>
+
+<div id="episodesContainer">
+  <!-- سيتم عرض الحلقات هنا -->
+</div>
+
+<!-- نافذة إنشاء حلقة جديدة -->
+<div id="episodeFormContainer" class="hidden">
+  <h2>إنشاء حلقة جديدة</h2>
+  <label>اسم الحلقة:</label>
+  <input type="text" id="episodeName">
+  
+  <label>عدد المتسابقين:</label>
+  <input type="number" id="playerCount" min="1" max="10">
+  
+  <div id="playersContainer"></div>
+  
+  <label>إضافة أسئلة الحلقة:</label>
+  <button id="addQuestionBtn">إضافة سؤال</button>
+  <div id="questionsContainer"></div>
+
+  <button id="saveEpisodeBtn">حفظ الحلقة</button>
+  <button id="cancelEpisodeBtn">إلغاء</button>
+</div>
+
+<!-- شاشة إدارة الحلقة -->
+<div id="episodeManagerContainer" class="hidden">
+  <h2 id="episodeTitle"></h2>
+  <div id="gameScreen"></div>
+  <button id="endEpisodeBtn">إنهاء الحلقة</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
